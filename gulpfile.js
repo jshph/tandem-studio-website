@@ -56,7 +56,7 @@ gulp.task('fonts', function() {
 
 gulp.task('imgs', function() {
     return gulp.src('./src/imgs/**/*')
-        .pipe(imagemin())
+        .pipe(imagemin({verbose: true}))
         .pipe(gulp.dest('./dist/imgs'));
 });
 
