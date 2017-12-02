@@ -35,12 +35,11 @@ nav {
 
 			&:after {
 				position: absolute;
-				left: 40%;
-				z-index: -1;
+				left: 0;
+				bottom: 0;
 
-				width: 10px;
-				height: 10px;
-				border-radius: 10px;
+				width: 0%;
+				height: 3px;
 				
 				background-color: transparent;
 				transition: 0.4s ease all;
@@ -48,14 +47,14 @@ nav {
 			}
 
 			&:hover {
-				color: white;
+				color: $blue;
 			}
 		}
 
 		&:hover {
 			a:after {
+				width: 100%;
 				background-color: $blue;
-				transform: scale(18);
 			}
 		}
 	}
