@@ -1,0 +1,11 @@
+@for $i from 1 through 6 {
+    h#{7 - $i} {
+        font-size: $i * $scale;
+        font-family: 'Circe Bold', sans-serif;
+    }
+}
+
+p {
+	font-family: 'Circe', sans-serif;
+	font-size: 1em*$scale;
+}

@@ -55,6 +55,11 @@ gulp.task('pug-watch', ['templates'], function(done) {
     done();
 });
 
+gulp.task('imgs-watch', ['imgs'], function(done) {
+    browserSync.reload();
+    done();
+});
+
 gulp.task('fonts', function() {
     return gulp.src('./src/fonts/**/*')
         .pipe(gulp.dest('./dist/fonts'));
@@ -84,7 +89,9 @@ gulp.task('watch', ['templates', 'scss', 'js'], function() {
     gulp.watch("./src/js/*.js", ['js-watch']);
     gulp.watch("./src/templates/**/*.pug", ['pug-watch']);
     gulp.watch("./src/scss/**/*.scss", ['scss-watch']);
+    gulp.watch("./src/imgs/**/*.svg", ['imgs-watch']);
 });
 
-// only run 'imgs' task when you build, it takes forever
-gulp.task('build', ['templates', 'scss', 'js', 'imgs', 'fonts']);
+gulp.task('build', ['clean'], () => {
+	gulp.run('js', 'scss', 'imgs', 'fonts', 'templates');
+});
