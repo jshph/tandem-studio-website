@@ -14,16 +14,11 @@ $(document).ready(function() {
 
       window.requestAnimationFrame(function() {
 
-        dim = (1 + scrollY / 30);
-        console.log(dim);
+        scaleFactor = (1 + scrollY / 30);
 
         $('#logo-circle').css({
-          "transform": "scale("+dim+")"
-        })
-
-        // $('#hero table').css({
-        //   'margin-top': -scrollY * 2
-        // })
+          "transform": "scale("+scaleFactor+")"
+        });
 
         ticking = false;
       });
