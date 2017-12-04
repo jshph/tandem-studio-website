@@ -1,3 +1,35 @@
+.container {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.container--wide {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.container--narrow {
+	width: 40%;
+	margin: 0 auto;
+}
+
+.fl {
+	display: flex;
+}
+
+.cl {
+	flex-direction: column;
+}
+
+.center-both {
+	justify-content: center;
+	align-items: center;
+}
+
 .scrolled-to-limit {
     background-color: $yellow;
+}
+
+section {
+	margin-top: $navHeight;
 }

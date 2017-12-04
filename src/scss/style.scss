@@ -5,6 +5,7 @@
 @import 'partials/media-queries';
 
 @import 'components/nav';
+@import 'components/index';
 
 body {
     background: white;
@@ -44,8 +45,8 @@ body {
         opacity: 1;
         z-index: -10;
         position: absolute;
-        top: -35px;
-        left: -5px;
+        top: -40px;
+        left: 5px;
         transition: 0.2s ease all;
     }
 }
@@ -56,21 +57,7 @@ body {
     height: auto;
     margin-top: 100vh;
     position: relative;
-    padding-bottom: 100px;
-    z-index: 0;
-
-    section {
-        text-align: center;
-        padding: 50px 0px;
-        width: 70%;
-        margin: 0 auto;
-    }
-}
-
-
-#content .container {
-    max-width: none;
-    ;
+    text-align: center;
 }
 
 #featured-projects {
@@ -97,7 +84,7 @@ body {
     }
 
     .project-info {
-        position: absolute;
+        position: relative;
         padding: 70px 70px;
         opacity: 1.0;
         z-index: 1;
