@@ -12,6 +12,14 @@ nav {
 	font-family: 'Circe Bold';
 	background-color: transparent;
 	font-size: 1.15em;
+
+	#nav-logo {
+		height: $navHeight * 0.75;
+		margin-left: 15px;
+		opacity: 0;
+
+		transition: 0.3s ease all;
+	}
 	
 	ul {
 		list-style: none;
