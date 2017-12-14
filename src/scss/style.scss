@@ -30,7 +30,7 @@ body {
 
     img {
         height: 250px;
-        position: relative;
+        position: relative;;
     }
 
     #logo-circle-wrapper {
@@ -45,8 +45,8 @@ body {
         opacity: 1;
         z-index: -10;
         position: absolute;
-        top: -40px;
-        left: 5px;
+        top: -30px;
+        left: 0px;
         transition: 0.2s ease all;
     }
 }
@@ -108,4 +108,17 @@ body {
             font-size: 24pt;
         }
     }
+}
+
+.yellow {
+    background-color: #ffd200;
+}
+
+// Compact hero code
+
+div#compact-hero {
+    margin-top:70px;
+    background-color:#fff4bf;
+    height:100px;
+    padding:20px;
 }

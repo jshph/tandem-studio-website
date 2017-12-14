@@ -9,8 +9,8 @@ $(document).ready(function() {
   window.addEventListener('scroll', function(e) {
     prev_scrollY = window.scrollY;
     if (!ticking && prev_scrollY < contentHeight - navHeight) {
-      if (nav.hasClass('scrolled-to-limit'))
-        nav.removeClass('scrolled-to-limit');
+      if (nav.hasClass('yellow'))
+        nav.removeClass('yellow');
 
       window.requestAnimationFrame(function() {
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
       ticking = true;
 
     } else {
-      nav.addClass('scrolled-to-limit');
+      nav.addClass('yellow');
     }
   });
 

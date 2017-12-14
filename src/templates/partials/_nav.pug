@@ -1,12 +1,27 @@
-nav
-	a(href='/')
-		img#nav-logo(src='./dist/imgs/logo-nav.svg')
-	ul
-		li
-			a(href='#') About Us
-		li
-			a(href='#') Our Team
-		li
-			a(href='#') Portfolio
-		li
-			a(href='#') Request
+mixin colored_nav(isYellow)
+	if isYellow
+		nav.yellow
+			a(href='/')
+				img#nav-logo(src='./dist/imgs/logo-nav.svg')
+			ul
+				li
+					a(href='/') About Us
+				li
+					a(href='/team.html') Our Team
+				li
+					a(href='#') Portfolio
+				li
+					a(href='#') Request
+	else
+		nav
+			a(href='/')
+				img#nav-logo(src='./dist/imgs/logo-nav.svg')
+			ul
+				li
+					a(href='/') About Us
+				li
+					a(href='/team.html') Our Team
+				li
+					a(href='#') Portfolio
+				li
+					a(href='#') Request
