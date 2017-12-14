@@ -1,6 +1,9 @@
 extends partials/_layout
+include partials/_compact_hero
 
 block content
 	+colored_nav(true)
-	include partials/_compact_hero
+	+compact_hero
+		h1 Learn about our team
+		p we hope we're impressive pls
 	p hello

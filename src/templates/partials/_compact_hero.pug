@@ -1,2 +1,8 @@
-div#compact-hero
-	h1 Our team
+mixin compact_hero
+	div#compact-hero
+		div.info
+			if block
+				block
+			else
+				p No content provided
+		img(src='dist/imgs/compact_hero.png')
