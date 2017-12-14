@@ -58,16 +58,22 @@ body {
     margin-top: 100vh;
     position: relative;
     text-align: center;
+
+    & > * {
+    }
 }
+
+
 
 #featured-projects {
     width: 100%;
 
     .project {
         height: 370px;
-        margin: 20px 0px;
+        margin: 20px auto;
         overflow: hidden;
         cursor: pointer;
+        width:80%;
 
         img {
             width: 100%;
@@ -84,11 +90,12 @@ body {
     }
 
     .project-info {
-        position: relative;
+        position: absolute;
         padding: 70px 70px;
         opacity: 1.0;
         z-index: 1;
         width: 50%;
+        text-align: left;
 
         h2 {
             font-weight: 600;
