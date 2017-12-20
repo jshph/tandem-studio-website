@@ -116,26 +116,52 @@ body {
 
 // Compact hero code
 
+$compact-hero-top: -250px;
+$perspective: 1px;
+
+@function parallax_scale($translateZ) {
+    @return 1 + ($translateZ * -1) / $perspective;
+}
+
+@mixin parallax($translateZ) {
+    $scale: (1 + ($translateZ * -1) / $perspective);
+    transform: translateZ($translateZ) scale($scale);
+    margin-top: $compact-hero-top * $scale;
+}
+
 div#compact-hero {
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
     margin-top:70px;
-    height:400px;
+    height:100vh;
     position:relative;
+    perspective: $perspective;
 
     img {
-        width:100%;
         opacity:0.5;
         z-index:-1;
-        height:auto;
-        margin: -250px 0px 0px -10px;
-        position:absolute;
+        height:auto;position:absolute;
+        width:100%;
+        top:-100vh;
+        padding:100vh 0;
+    }
+
+    .parallax-base {
+        @include parallax(-1px);
+    }
+
+    .parallax-top {
+        @include parallax(0px);
     }
 
     .info {
+        $translateZ: -2px;
         position:absolute;
         z-index:1;
         padding:30px;
-
+        top:-30px * parallax_scale($translateZ);
+        left:-300px * parallax_scale($translateZ);
+        @include parallax($translateZ);
 
         h1 {
             font-size:48pt;
