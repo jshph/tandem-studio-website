@@ -127,6 +127,7 @@ $perspective: 1px;
     $scale: (1 + ($translateZ * -1) / $perspective);
     transform: translateZ($translateZ) scale($scale);
     margin-top: $compact-hero-top * $scale;
+    height: auto;
 }
 
 div#compact-hero {
@@ -138,9 +139,9 @@ div#compact-hero {
     perspective: $perspective;
 
     img {
-        opacity:0.5;
+        opacity:0.2;
         z-index:-1;
-        height:auto;position:absolute;
+        position:absolute;
         width:100%;
         top:-100vh;
         padding:100vh 0;
@@ -157,14 +158,30 @@ div#compact-hero {
     .info {
         $translateZ: -2px;
         position:absolute;
-        z-index:1;
-        padding:30px;
-        top:-30px * parallax_scale($translateZ);
-        left:-300px * parallax_scale($translateZ);
+        z-index:10;
+        width:100vw;
         @include parallax($translateZ);
 
-        h1 {
-            font-size:48pt;
+        #header_content {
+            padding:40px;
+            h1 {
+                font-size: 42pt;
+            }
+            p {
+                font-size: 24pt;
+            }
+        }
+
+        #compact_hero_content {
+            width:100vw;
+            background-color:white;
+            position:absolute;
+            top:380px;
+            padding-top:200px;
+            z-index:15;
+            & img {
+                opacity:1.0 !important;
+            }
         }
     }
 }
