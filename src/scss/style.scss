@@ -120,12 +120,15 @@ div#compact-hero {
     overflow:hidden;
     margin-top:70px;
     height:400px;
+    position:relative;
 
     img {
         width:100%;
-        height:auto;
         opacity:0.5;
         z-index:-1;
+        height:auto;
+        margin: -250px 0px 0px -10px;
+        position:absolute;
     }
 
     .info {
@@ -138,4 +141,11 @@ div#compact-hero {
             font-size:48pt;
         }
     }
+}
+
+// Hexagon addendum
+
+#hexGrid {
+    margin-top:100px;
+    width:60%;
 }
