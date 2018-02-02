@@ -6,11 +6,16 @@
 
 @import 'components/nav';
 @import 'components/index';
+@import 'components/_member_profile';
 
 body {
     background: white;
     /*  #2d2e2d; */
     margin: 0px;
+}
+
+main {
+    margin-top: $navHeight;
 }
 
 #hero {
@@ -51,7 +56,7 @@ body {
     }
 }
 
-#content {
+#landing-content {
     background: white;
     width: 100%;
     height: auto;

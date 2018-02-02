@@ -1,0 +1,62 @@
+#profile-wrap {
+	height: calc(100vh - #{$navHeight});
+}
+
+#profile {
+	display: grid;
+	grid-template-columns: 15% 10% repeat(12, 1fr) 25%;
+	grid-template-rows: 15% 10% repeat(10, 5%) 10% 15%;
+
+	#profile-img {
+		grid-column: 3 / 6;
+		grid-row: 3 / 10;
+		border-radius: 50%;
+		height: 100%;
+		width: auto;
+	}
+
+	#profile-header {
+		grid-column: 6 / 14;
+		grid-row: 3 / 4;
+		justify-self: end;
+	}
+
+	#profile-skills {
+		grid-column: 6 / 14;
+		grid-row: 5 / 7;
+		justify-self: end;
+
+		img {
+			height: 50px;
+			width: auto;
+			border-radius: 50%;
+
+			&:first-of-type {
+				margin-right: 5px;
+			}
+
+			&:last-of-type {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	#profile-desc {
+		grid-column: 4 / 14;
+		grid-row: 10;
+		align-self: end;
+	}
+
+	#profile-nav {
+		grid-column: 0 / 1;
+		grid-row: 2 / 14;
+
+		img {
+			max-width: 50%;
+			height: auto;
+			border-radius: 50%;
+			margin: 10px;
+			cursor: pointer;
+		}
+	}
+}

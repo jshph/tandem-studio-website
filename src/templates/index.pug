@@ -1,14 +1,16 @@
 extends partials/_layout
 
-block content
+block nav
 	+colored_nav(false)
+
+block content
 	#hero
 		//- #logo-circle-wrapper
 		//- 	#logo-circle
 		#logo-circle-wrapper
 			#logo-circle
 		img(src='dist/imgs/logo.png', alt='')
-	#content
+	#landing-content
 		section#about.fl.cl.center-both
 			.container--narrow.fl.cl.center-both
 				h1 We design in tandem with you.
