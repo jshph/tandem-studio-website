@@ -8,11 +8,16 @@
 	grid-template-rows: 15% 10% repeat(10, 5%) 10% 15%;
 
 	#profile-img {
-		grid-column: 3 / 6;
-		grid-row: 3 / 10;
-		border-radius: 50%;
-		height: 100%;
-		width: auto;
+		grid-column: 3 / 8;
+		grid-row: 3 / 8;
+
+		img {
+			border-radius: 50%;
+			height: calc(100% - 20px);
+			width: auto;
+			border: 20px solid $yellow;
+		}
+
 	}
 
 	#profile-header {
@@ -22,8 +27,9 @@
 	}
 
 	#profile-skills {
+		padding-top: 25px;
 		grid-column: 6 / 14;
-		grid-row: 5 / 7;
+		grid-row: 4 / 5;
 		justify-self: end;
 
 		img {
@@ -43,7 +49,7 @@
 
 	#profile-desc {
 		grid-column: 4 / 14;
-		grid-row: 10;
+		grid-row: 9;
 		align-self: end;
 	}
 
@@ -52,11 +58,54 @@
 		grid-row: 2 / 14;
 
 		img {
-			max-width: 50%;
+			user-select: none;
+			width: 40%;
 			height: auto;
 			border-radius: 50%;
 			margin: 10px;
 			cursor: pointer;
+			transition: 0.2s ease all;
+			border: 0px solid $yellow;
+
+			&:hover {
+				width: calc(40% - 14px);
+				border: 7px solid $yellow;
+			}
 		}
+
+		.active {
+			width: 55%;
+			border: 7px solid $yellow;
+
+			&:hover {
+				width: calc(55% - 7px);
+				border: 7px solid $yellow;
+			}
+		}
+	}
+}
+
+.arrow {
+	height: 25px;
+	width: 25px;
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+	cursor: pointer;
+	transition: 0.2s ease all;
+}
+
+#profile-nav-up {
+	transform: rotate(-45deg);
+
+	&:hover {
+		transform: translateY(-10px) rotate(-45deg);
+	}
+}
+
+#profile-nav-down {
+	transform: rotate(135deg);
+
+	&:hover {
+		transform: translateY(10px) rotate(135deg);
 	}
 }
