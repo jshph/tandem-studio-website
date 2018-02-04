@@ -13,24 +13,24 @@
 
 		img {
 			border-radius: 50%;
-			height: calc(100% - 20px);
-			width: auto;
-			border: 20px solid $yellow;
+			width: calc(80% - 15px);
+			height: auto;
+			border: 15px solid $yellow;
 		}
 
 	}
 
 	#profile-header {
-		grid-column: 6 / 14;
+		grid-column: 8 / 14;
 		grid-row: 3 / 4;
-		justify-self: end;
+		justify-self: start;
 	}
 
 	#profile-skills {
 		padding-top: 25px;
-		grid-column: 6 / 14;
+		grid-column: 8 / 14;
 		grid-row: 4 / 5;
-		justify-self: end;
+		justify-self: start;
 
 		img {
 			height: 50px;
@@ -48,8 +48,8 @@
 	}
 
 	#profile-desc {
-		grid-column: 4 / 14;
-		grid-row: 9;
+		grid-column: 8 / 14;
+		grid-row: 7;
 		align-self: end;
 	}
 
@@ -59,7 +59,7 @@
 
 		img {
 			user-select: none;
-			width: 40%;
+			width: 30%;
 			height: auto;
 			border-radius: 50%;
 			margin: 10px;
@@ -68,17 +68,17 @@
 			border: 0px solid $yellow;
 
 			&:hover {
-				width: calc(40% - 14px);
+				width: calc(30% - 14px);
 				border: 7px solid $yellow;
 			}
 		}
 
 		.active {
-			width: 55%;
+			width: 35%;
 			border: 7px solid $yellow;
 
 			&:hover {
-				width: calc(55% - 7px);
+				width: calc(35% - 7px);
 				border: 7px solid $yellow;
 			}
 		}

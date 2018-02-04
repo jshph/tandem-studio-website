@@ -11,7 +11,7 @@ const jsmin = require('gulp-jsmin');
 const clean = require('gulp-clean');
 const cache = require('gulp-cache');
 
-gulp.task('js', function() {
+gulp.task('js', () => {
     return gulp.src('./src/js/*.js')
         .pipe(jsmin())
         .pipe(rename({
@@ -20,12 +20,12 @@ gulp.task('js', function() {
         .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('js-watch', ['js'], function(done) {
+gulp.task('js-watch', ['js'], (done) => {
     browserSync.reload();
     done();
 });
 
-gulp.task('scss', function() {
+gulp.task('scss', () => {
     return gulp.src('./src/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefix())
@@ -36,46 +36,46 @@ gulp.task('scss', function() {
         .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('css', function() {
+gulp.task('css', () => {
     return gulp.src('./src/css/*.css')
         .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('css-watch', ['css'], function(done) {
+gulp.task('css-watch', ['css'], (done) => {
     browserSync.reload();
     done();
 });
 
-gulp.task('scss-watch', ['scss'], function(done) {
+gulp.task('scss-watch', ['scss'], (done) => {
     browserSync.reload();
     done();
 });
 
-gulp.task('templates', function() {
+gulp.task('templates', () => {
     return gulp.src('./src/templates/*.pug')
         .pipe(pug())
-        .pipe(filter(function(file) {
+        .pipe(filter((file) => {
             return !/\/_/.test(file.path) && !/^_/.test(file.relative);
         }))
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('pug-watch', ['templates'], function(done) {
+gulp.task('pug-watch', ['templates'], (done) => {
     browserSync.reload();
     done();
 });
 
-gulp.task('imgs-watch', ['imgs'], function(done) {
+gulp.task('imgs-watch', ['imgs'], (done) => {
     browserSync.reload();
     done();
 });
 
-gulp.task('fonts', function() {
+gulp.task('fonts', () => {
     return gulp.src('./src/fonts/**/*')
         .pipe(gulp.dest('./dist/fonts'));
 });
 
-gulp.task('imgs', function() {
+gulp.task('imgs', () => {
     return gulp.src('./src/imgs/**/*')
         .pipe(cache(imagemin({
             verbose: true
@@ -83,12 +83,12 @@ gulp.task('imgs', function() {
         .pipe(gulp.dest('./dist/imgs'));
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', () => {
 	return gulp.src('./dist', {read: false})
 		.pipe(clean());
 })
 
-gulp.task('watch', ['templates', 'imgs', 'scss', 'js'], function() {
+gulp.task('watch', ['templates', 'imgs', 'scss', 'js'], () => {
 
     browserSync.init({
         server: {
