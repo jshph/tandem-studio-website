@@ -88,7 +88,7 @@ gulp.task('clean', function() {
 		.pipe(clean());
 })
 
-gulp.task('watch', ['templates', 'scss', 'js'], function() {
+gulp.task('watch', ['templates', 'imgs', 'scss', 'js'], function() {
 
     browserSync.init({
         server: {
