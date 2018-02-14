@@ -1,4 +1,5 @@
 $(document).ready( function() {
+	// Lazy load img data-src URLs
 	window.addEventListener('load', function(){
 	    const allimages= document.getElementsByTagName('img');
 	    for (let i=0; i<allimages.length; i++) {
@@ -7,9 +8,6 @@ $(document).ready( function() {
 	    	}
 	    }
 	}, false)
-
-	let people = ['https://source.unsplash.com/200x201', 'https://source.unsplash.com/200x202', 'https://source.unsplash.com/200x203', 'https://source.unsplash.com/200x204', 'https://source.unsplash.com/200x205', 'https://source.unsplash.com/200x206', 'https://source.unsplash.com/200x207']
-	// TODO: lazy load these URLs
 
 	$profileNavImgs = $('#profile-nav img')
 	$profileImg = $('#profile-img img')

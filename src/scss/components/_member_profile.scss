@@ -3,13 +3,12 @@
 }
 
 #profile {
-	display: grid;
-	grid-template-columns: 15% 10% repeat(12, 1fr) 25%;
-	grid-template-rows: 15% 10% repeat(10, 5%) 10% 15%;
+	margin-top: 35%;
+	width: 60%;
 
 	#profile-img {
-		grid-column: 3 / 8;
-		grid-row: 3 / 8;
+		margin-top: 100px;
+		width: 45%;		
 
 		img {
 			border-radius: 50%;
@@ -19,18 +18,24 @@
 		}
 
 	}
+}
+
+#profile-content {
+	// outline: 1px solid red !important;
+	align-self: flex-start;
+	width: 55%;
 
 	#profile-header {
-		grid-column: 8 / 14;
-		grid-row: 3 / 4;
-		justify-self: start;
+		font-size: 1.5rem;
+
+		h1 {
+			margin-bottom: 1rem;
+		}
 	}
 
 	#profile-skills {
-		padding-top: 25px;
-		grid-column: 8 / 14;
-		grid-row: 4 / 5;
 		justify-self: start;
+		margin-bottom: 2rem;
 
 		img {
 			height: 50px;
@@ -38,50 +43,23 @@
 			border-radius: 50%;
 
 			&:first-of-type {
-				margin-right: 5px;
+				margin-right: 15px;
 			}
 
 			&:last-of-type {
-				margin-left: 5px;
+				margin-left: 15px;
 			}
 		}
 	}
 
-	#profile-desc {
-		grid-column: 8 / 14;
-		grid-row: 7;
-		align-self: end;
+	strong {
+		margin-bottom: 0.5rem;
 	}
 
-	#profile-nav {
-		grid-column: 0 / 1;
-		grid-row: 2 / 14;
-
-		img {
-			user-select: none;
-			width: 30%;
-			height: auto;
-			border-radius: 50%;
-			margin: 10px;
-			cursor: pointer;
-			transition: 0.2s ease all;
-			border: 0px solid $yellow;
-
-			&:hover {
-				width: calc(30% - 14px);
-				border: 7px solid $yellow;
-			}
-		}
-
-		.active {
-			width: 35%;
-			border: 7px solid $yellow;
-
-			&:hover {
-				width: calc(35% - 7px);
-				border: 7px solid $yellow;
-			}
-		}
+	p {
+		font-size: 1.5rem;
+		margin-top: 0.5rem;
+		line-height: 2rem;
 	}
 }
 
@@ -92,6 +70,39 @@
 	border-right: 2px solid black;
 	cursor: pointer;
 	transition: 0.2s ease all;
+}
+
+#profile-nav {
+	position: fixed;
+	left: 15px;
+	top: calc(50% + #{$navHeight});
+	transform: translateY(-50%);
+
+	img {
+		user-select: none;
+		width: 40%;
+		height: auto;
+		border-radius: 50%;
+		margin: 10px;
+		cursor: pointer;
+		transition: 0.2s ease all;
+		border: 0px solid $yellow;
+
+		&:hover {
+			width: calc(30% - 14px);
+			border: 7px solid $yellow;
+		}
+	}
+
+	.active {
+		width: 45%;
+		border: 7px solid $yellow;
+
+		&:hover {
+			width: calc(35% - 7px);
+			border: 7px solid $yellow;
+		}
+	}
 }
 
 #profile-nav-up {

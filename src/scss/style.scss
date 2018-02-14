@@ -8,6 +8,10 @@
 @import 'components/index';
 @import 'components/_member_profile';
 
+* {
+    // outline: 1px solid red !important;
+}
+
 body {
     background: white;
     /*  #2d2e2d; */

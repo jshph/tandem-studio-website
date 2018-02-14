@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 	window.addEventListener('scroll', function(e) {
 		prev_scrollY = window.scrollY
-		if (!ticking && prev_scrollY < contentHeight - navHeight - 20) {
+		if (!ticking && prev_scrollY < contentHeight - navHeight - 40) {
 			if (nav.hasClass('yellow'))
 				nav.removeClass('yellow')
 

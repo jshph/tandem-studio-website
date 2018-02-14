@@ -5,28 +5,38 @@ block nav
 	+colored_nav(true)
 
 block content
-	#profile-wrap.fl: #profile
+	#profile-wrap.fl.cl.center-both: #profile.fl
 		#profile-img
 			img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x200/?nature,people,headshot')
-		#profile-header
-			h1 Efren Martinez
-		#profile-skills
-			img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x209/?nature,people,headshot')
-			img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x201/?nature,people,headshot')
-			img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x202/?nature,people,headshot')
-		#profile-desc
-			p Lorem ipsum dolor amet tattooed brooklyn single-origin coffee taiyaki letterpress locavore fam pok pok. Jean shorts quinoa umami locavore cold-pressed disrupt trust fund kombucha.
+		#profile-content.fl.cl
+			#profile-header
+				h1 Efren Martinez
+			#profile-skills
+				img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x209/?nature,people,headshot')
+				img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x201/?nature,people,headshot')
+				img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x202/?nature,people,headshot')
+			#profile-desc
+				strong Year & Major:
+				p Junior, Business
+				strong Hometown:
+				p Abilene, TX
+				strong Team superpower:
+				p I can quack like a duck
+				strong If I designed my own class, it would be:
+				p Underwater basket weaving
+			#profile-bio
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et suscipit sem, sit amet accumsan odio. Nam pellentesque porttitor tortor quis gravida. Suspendisse egestas nec ligula non ullamcorper. Nam vehicula hendrerit euismod. Etiam sed turpis sed urna facilisis sodales eget malesuada nulla. Quisque mi quam, pharetra id aliquam vel, tristique et turpis. Fusce quis justo tempus, mollis elit hendrerit, maximus leo. Etiam vitae massa nunc. Phasellus feugiat magna non ex dapibus egestas.
 
-		#profile-nav.fl.cl.center-both
-			#profile-nav-up.arrow
-			img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x203/?nature,people,headshot')
-			img.active(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x200/?nature,people,headshot')
-			img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x210/?nature,people,headshot')
-			img.hidden(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x212/?nature,people,headshot')
-			img.hidden(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x203/?nature,people,headshot')
-			img.hidden(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x208/?nature,people,headshot')
-			img.hidden(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x206/?nature,people,headshot')
-			#profile-nav-down.arrow
+	#profile-nav.fl.cl.center-both
+		#profile-nav-up.arrow
+		img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x203/?nature,people,headshot')
+		img.active(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x200/?nature,people,headshot')
+		img(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x210/?nature,people,headshot')
+		img.hidden(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x212/?nature,people,headshot')
+		img.hidden(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x203/?nature,people,headshot')
+		img.hidden(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x208/?nature,people,headshot')
+		img.hidden(src='http://via.placeholder.com/150x150' data-src='https://source.unsplash.com/200x206/?nature,people,headshot')
+		#profile-nav-down.arrow
 
 block scripts
 	script(type='text/javascript', src='dist/js/team.min.js')
